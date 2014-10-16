@@ -29,17 +29,10 @@ stepday <- tapply(d$steps, d$date, sum, na.rm = TRUE)
 
 
 ```r
-png(file = "hist1.png")
 hist(stepday, breaks = 15,main = "Average number of steps taken each day", xlab ="Number of steps")
-dev.off()
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
-
-```
-## RStudioGD 
-##         2
-```
 
 ### 1.2 Mean and median
 
@@ -73,17 +66,10 @@ DA$interval <- as.numeric(DA$interval)
 
 # plot
 library(lattice)
-png(file = "plot2.png")
 xyplot(DA$steps ~ DA$interval, type = "l", main = "Average daily activity pattern", xlab = "5-min interval", ylab = "Average number of steps")
-dev.off()
 ```
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
-
-```
-## RStudioGD 
-##         2
-```
 
 ### 2.2 Interval and maximum number of steps
 
@@ -166,17 +152,10 @@ stepday1 <- tapply(d1$steps, d1$date, sum)
 
 
 ```r
-png(file = "hist2.png")
 hist(stepday1, breaks = 15,main = "Average number of steps taken each day", xlab ="Number of steps")
-dev.off()
 ```
 
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
-
-```
-## RStudioGD 
-##         2
-```
 
 Mean and median:
 
@@ -226,14 +205,7 @@ StepsDayType$interval <- as.numeric(StepsDayType$interval)
 
 
 ```r
-png(file = "plot4.png")
 xyplot(steps ~ interval | dayType, data = StepsDayType, type = "l", xlab = "5-min Interval", ylab = "Average number of steps", main = "Activity patterns for weekdays and weekends")
-dev.off()
 ```
 
 ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
-
-```
-## RStudioGD 
-##         2
-```

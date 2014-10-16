@@ -1,4 +1,4 @@
-Reproducible Research - project 1
+Reproducible Research Course - project 1
 ========================================================
 
 Let's first load the data:
